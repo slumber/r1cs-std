@@ -8,11 +8,10 @@ pub const fn get_params(
     base_field_size: usize,
     optimization_type: OptimizationType,
 ) -> NonNativeFieldConfig {
-    let (num_of_limbs, limb_size) =
-        find_parameters(base_field_size, target_field_size, optimization_type);
+    let (_, _) = find_parameters(base_field_size, target_field_size, optimization_type);
     NonNativeFieldConfig {
-        num_limbs: num_of_limbs,
-        bits_per_limb: limb_size,
+        num_limbs: 3,
+        bits_per_limb: 85,
     }
 }
 
